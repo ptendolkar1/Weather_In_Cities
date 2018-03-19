@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="webHW.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Got navbar sample working code from "https://getbootstrap.com/docs/3.3/components/#navbar-default"
+  and modified it. Worked very well" -->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><b>Analysis of Weather vs Lattitude</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Plots</b><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Temp.html">Max Temperature</a></li>
+            <li><a href="Humidity.html">Humidity</a></li>
+            <li><a href="Cloudiness.html">Cloudiness</a></li>
+            <li><a href="Windspeed.html">Wind Speed</a></li>
+          </ul>
+        </li>
+        <li><a href="Comparison.html"><b>Comparison</b></a></li>
+        <li><a href="Data.html"><b>Data</b></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h3><center>Weather in Global Cities vs Latitude</center></h3>
+  <br>
+  <h5><b><center>Have you ever wondered about how the weather changes across the globe as you go towards the equator?</center></b></h5>
+  <h5><b><center>If you did then you have landed on the right page. Enjoy!</center></b></h5>
+  <!--
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p> -->
+</div>
+<div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8">
+          <div class="box">Summary: Latitude vs. X
+          <br>
+          <a href="Temp.html">
+          <img class="image" src = "Max Temperature_Latitude.png" ALIGN=left HSPACE=40 VSPACE=20/>
+          </a>
+          <br>
+          <p>The purpose of this project was to analyze how the weather
+          changes as you get closer to the equator. To accomplish
+          this analysis, this module employs Python requests, weather APIs,
+          and JSON traversals. Using the Citipy library and
+          OpenWeatherMap API, this script creates a representative
+          model of weather across 500+ cities across the globe.
+          <br>
+          <br>
+          The program randomly generates over 1000 latitude/longitude pairs
+          and feeds them to the OpenWeatherMapAPI. It performs a series of
+          successive throttled API calls to extract weather data in
+          all found cities. It then drops duplicate cities, null value
+          rows, counts the total, and saves the resulting table
+          as a CSV. To showcase the following relationships, it
+          builds a series of scatter plots using Matplotlib:
+          <ul>
+            <li>Temperature (F) vs. Latitude</li>
+            <li>Humidity (%) vs. Latitude</li>
+            <li>Cloudiness (%) vs. Latitude</li>
+            <li>Wind Speed (mph) vs. Latitude</li>
+          </ul>
+          Finally, alongwith the city data CSV, it returns the
+          scatterplots as png files.
+          </p>
+          </div>
+        </div>
+
+        <div class = "col-xs-12 col-sm-12 col-md-4">
+          <div class="box">Visualizations
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Temp.html">
+                    <img class="image" src = "Max Temperature_Latitude.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Temp.html">
+                    <img class="image" src = "Humidity_Latitude.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Humidity.html">
+                    <img class="image" src = "Cloudiness_Latitude.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Windspeed.html">
+                    <img class="image" src = "Windspeed_Latitude.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

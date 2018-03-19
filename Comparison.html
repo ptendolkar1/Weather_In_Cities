@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="webHW.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Got navbar sample working code from "https://getbootstrap.com/docs/3.3/components/#navbar-default"
+  and modified it. Worked very well" -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><b>Analysis of Weather vs Lattitude</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Plots</b><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Temp.html">Max Temperature</a></li>
+            <li><a href="Humidity.html">Humidity</a></li>
+            <li><a href="Cloudiness.html">Cloudiness</a></li>
+            <li><a href="Windspeed.html">Wind Speed</a></li>
+          </ul>
+        </li>
+        <li><a href="Comparison.html"><b>Comparison</b></a></li>
+        <li><a href="Data.html"><b>Data</b></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+        <div class="box_vis">
+            <h3><strong><center>Comparison: Lattitude vs X</center></strong></h3>
+            <h4><center>( Click on any plot to get an in-depth analysis )</center></h4>
+          <div class="row">
+              <div class="col-xs-12 col-md-6">
+                  <p>vs. Max Temperature</p>
+                  <a href="Temp.html">
+                  <img class="image" src = "Max Temperature_Latitude.png" HSPACE=10 VSPACE=15/>
+                  </a>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                  <p>vs. Humidity</p>
+                  <a href="Temp.html">
+                  <img class="image" src = "Humidity_Latitude.png" HSPACE=10 VSPACE=15/>
+                  </a>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                  <p>vs. Cloudiness</p>
+                  <a href="Humidity.html">
+                  <img class="image" src = "Cloudiness_Latitude.png" HSPACE=10 VSPACE=15/>
+                  </a>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                  <p>vs. Wind Speed</p>
+                  <a href="Windspeed.html">
+                  <img class="image" src = "Windspeed_Latitude.png" HSPACE=10 VSPACE=15/>
+                  </a>
+              </div>
+          </div>
+        </div>
+</body>
+</html>

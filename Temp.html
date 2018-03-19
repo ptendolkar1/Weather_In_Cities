@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="webHW.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Got navbar sample working code from "https://getbootstrap.com/docs/3.3/components/#navbar-default"
+  and modified it. Worked very well" -->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><b>Analysis of Weather vs Latitude</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Plots</b><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Temp.html">Max Temperature</a></li>
+            <li><a href="Humidity.html">Humidity</a></li>
+            <li><a href="Cloudiness.html">Cloudiness</a></li>
+            <li><a href="Windspeed.html">Wind Speed</a></li>
+          </ul>
+        </li>
+        <li><a href="Comparison.html"><b>Comparison</b></a></li>
+        <li><a href="Data.html"><b>Data</b></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h3><center>Max Temperature vs. Latitude</center></h3>
+  <!--
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p> -->
+</div>
+<div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-7">
+          <div class="box_vis">Summary: Latitude vs. Max Temperature
+          <br>
+          <a href="Temp.html">
+          <img class="image_vis" src = "Max Temperature_Latitude.png" VSPACE=20/>
+          </a>
+          <br>
+          <p>From the Max Temperature vs Lattitude graph its clear that as one goes away from the equator (0 deg latitude), the
+            temperature starts decreasing on either side. There are more number of points on the right side of
+            the graph, because there are more cities (as more land) in the northern hemisphere than in the southern hemisphere.
+            Also, there are more cities farther north than in farther south, and so the graph is bent more on the
+            right side with even lower temperatures as they are closer to north pole (much farther from the equator).
+          </p>
+          </div>
+        </div>
+
+        <div class = "col-xs-12 col-sm-12 col-md-5">
+          <div class="box_vis">Visualizations
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Temp.html">
+                    <img class="image_vis_with_border" src = "Max Temperature_Latitude.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Humidity.html">
+                    <img class="image" src = "Humidity_Latitude.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Cloudiness.html">
+                    <img class="image" src = "Cloudiness_Latitude.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Windspeed.html">
+                    <img class="image" src = "Windspeed_Latitude.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
